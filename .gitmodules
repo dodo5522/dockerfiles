@@ -1,0 +1,4 @@
+[submodule "jenkins/jenkins_home/jobs"]
+	path = jenkins/jenkins_home/jobs
+	url = git@github.com:dodo5522/jenkins-jobs.git
+	branch = master
