@@ -11,6 +11,11 @@ ARG DEPENDENT_PACKAGES=\
     vlc \
     libdvdcss-dev \
     libdvdcss2
+ARG DEPENDENT_PLUGINS=\
+    envinject:2.4.0 \
+    job-import-plugin:3.4 \
+    slack:2.45 \
+    blueocean:1.24.3
 
 USER root
 RUN apt-get update && apt-get install -y apt-transport-https \
@@ -25,5 +30,7 @@ RUN add-apt-repository \
 RUN apt-get update && apt-get install -y docker-ce-cli
 
 USER jenkins
-RUN jenkins-plugin-cli --plugins blueocean:1.24.3
+RUN for PLUGIN in ${DEPENDENT_PLUGINS}; do \
+        jenkins-plugin-cli --plugins ${PLUGIN}; \
+    done
 
