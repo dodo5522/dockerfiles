@@ -1,5 +1,4 @@
 FROM jenkins/jenkins:2.263.1-lts-slim
-LABEL version 1.1
 
 ARG DEPENDENT_PACKAGES="\
     curl \
