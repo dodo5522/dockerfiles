@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-NAME=jenkins
-IMAGE="dodo5522/${NAME}:1.0"
+source env.sh
+
 JENKINS_HOME="$(cd "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P)/jenkins_home"
 JENKINS_HOME_VM="/var/$(basename "${JENKINS_HOME}")"
 JENKINS_ADMIN_PW="${JENKINS_HOME_VM}/secrets/initialAdminPassword"
