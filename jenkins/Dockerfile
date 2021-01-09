@@ -1,4 +1,5 @@
 FROM jenkins/jenkins:2.263.1-lts-slim
+MAINTAINER Takashi Ando <dodo5522@gmail.com>
 
 ARG DEPENDENT_PACKAGES="\
     curl \
