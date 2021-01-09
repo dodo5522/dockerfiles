@@ -5,6 +5,7 @@ ARG DEPENDENT_PACKAGES="\
     handbrake-cli \
     lsdvd \
     vobcopy \
+    ffmpeg \
     python3-pip \
     python3-jenkins \
     python3-lxml \
