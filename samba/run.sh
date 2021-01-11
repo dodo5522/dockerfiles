@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 PROGNAME="$(basename $0)"
-VERSION="0.9"
+VERSION="1.0"
 
 function usage() {
   echo "Usage: ${PROGNAME} [OPTIONS]"
