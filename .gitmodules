@@ -2,3 +2,7 @@
 	path = jenkins/jenkins_home/jobs
 	url = git@github.com:dodo5522/jenkins-jobs.git
 	branch = master
+[submodule "samba/samba"]
+	path = samba/samba
+	url = git@github.com:dodo5522/samba.git
+	branch = master

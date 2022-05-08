@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 
-source env.sh
+source .env.sample
 docker build -t "${IMAGE}" .
 
