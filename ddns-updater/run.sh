@@ -1,9 +1,15 @@
 #!/usr/bin/env bash
 
-source env.sh
+if ! [ -f .env ]; then
+  echo Error! Make .env based on .env.sample
+  exit 1
+fi
+
+source .env
+
 docker run \
   --name "${NAME}" \
   --detach \
-  -e USER="${USER}" \
-  -e PASSWORD="${PASSWORD}" \
+  --env-file .env \
   "${IMAGE}"
+
