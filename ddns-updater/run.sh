@@ -9,6 +9,7 @@ source .env
 
 docker run \
   --name "${NAME}" \
+  --restart unless-stopped \
   --detach \
   --env-file .env \
   "${IMAGE}"
