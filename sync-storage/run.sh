@@ -4,6 +4,7 @@ set -eu
 
 source env.sh
 docker run -d \
+    --name "${NAME}" \
     -v ${SYNC_TARGET}:${MOUNT_POINT} \
     -e MOUNT_POINT="${MOUNT_POINT}" \
     -e BUCKET="${BUCKET}" \
