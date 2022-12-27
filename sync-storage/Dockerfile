@@ -4,7 +4,7 @@ MAINTAINER Takashi Ando <dodo5522@gmail.com>
 WORKDIR /root
 
 # Install dependencies
-RUN yum update && yum install -y crontabs glibc-langpack-ja
+RUN yum update -y && yum install -y crontabs glibc-langpack-ja
 
 # Set locale and timezone
 ENV LANG ja_JP.UTF-8
