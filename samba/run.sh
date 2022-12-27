@@ -11,6 +11,7 @@ read -rp 'Enter password: ' ADMIN_PASSWORD
 
 docker run \
   --name "${NAME}" \
+  --restart unless-stopped \
   --detach \
   -e TZ='Asia/Tokyo' \
   -p 139:139 \
